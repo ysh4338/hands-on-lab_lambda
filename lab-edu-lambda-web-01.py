@@ -21,22 +21,6 @@ def lambda_handler(event, context):
             font-family: arial; font-size: 2em;color: #eb971a; margin-top:50px;
             text-align: center;
         }
-        button {
-                background-color: #eb971a;
-                border:none;
-                color:white;
-                border-radius: 5px;
-                width:40%;
-                height:35px;
-                font-size: 13pt;
-                margin-top:30px;
-                text-align: center;
-        }
-        #sentence {
-                font-size: 17pt;
-                margin-top:30px;
-                font-weight: bold;
-                color: #eb971a;
         }
     </style>
         </head>
@@ -44,27 +28,7 @@ def lambda_handler(event, context):
             <p id="title">Hello World From <b>Lambda</b></p>
             <center><img src="https://velog.velcdn.com/images/chrishan/post/9a9b135f-27a4-49b0-a512-dfa2cbf5d671/image.png" alt="Lambda image" width="500" height="300" align="center" border="0"></center>
             <hr id="lambda-line" width="800px" align="center" color="#eb971a;">
-            <center><button onclick="checkEvent();">Who are you?</button></center>
-            <center><div id="sentence"></div></center>
         </body>
-        <script type="text/javascript">
-        
-            function checkEvent(){
-                $.ajax({ type: "GET", 
-                        url: "https://hm3xondha0.execute-api.ap-northeast-2.amazonaws.com/dev", 
-                        dataType:'json',
-                        success: function(data){ 
-                        document.getElementById('sentence').innerHTML = data.status + "&nbsp;&nbsp;" + data.name
-                        }, 
-                        error: function (error){
-                        alert('ERROR::');
-                        console.log(error)
-                        }
-
-                });
-            }
-
-        </script>
         </html>
             
         """
