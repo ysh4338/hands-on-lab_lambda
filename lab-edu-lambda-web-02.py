@@ -51,7 +51,7 @@ def lambda_handler(event, context):
         
             function checkEvent(){
                 $.ajax({ type: "GET", 
-                        url: "https://hm3xondha0.execute-api.ap-northeast-2.amazonaws.com/dev", 
+                        url: "URL정보입력", 
                         dataType:'json',
                         success: function(data){ 
                         document.getElementById('sentence').innerHTML = data.status + "&nbsp;&nbsp;" + data.name
@@ -60,10 +60,8 @@ def lambda_handler(event, context):
                         alert('ERROR::');
                         console.log(error)
                         }
-
                 });
             }
-
         </script>
         </html>
             
