@@ -42,7 +42,7 @@ def lambda_handler(event, context):
         </head>
         <body>
             <p id="title"><b>Shiba-inu</b></p>
-            <center><img src="https://lab-edu-bucket-image-578075667399.s3.ap-northeast-2.amazonaws.com/shiba-inu.jpg" alt="Dog image" width="500" height="300" align="center" border="0"></center>
+            <center><img src="AmazonS3_URL정보입력" alt="Dog image" width="500" height="300" align="center" border="0"></center>
 
             <center><button onclick="checkEvent();">Who are you?</button></center>
             <center><div id="sentence"></div></center>
@@ -51,7 +51,7 @@ def lambda_handler(event, context):
         
             function checkEvent(){
                 $.ajax({ type: "GET", 
-                        url: "URL정보입력", 
+                        url: "API_Gateway_REST_URL정보입력", 
                         dataType:'json',
                         success: function(data){ 
                         document.getElementById('sentence').innerHTML = data.status + "&nbsp;&nbsp;" + data.name
